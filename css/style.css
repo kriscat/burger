@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #f6f6f6;
+}
+
+nav {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100px;
+}
+
+#checkbox-menu,
+.toggle {
+    display: none;
+}
+
+.menu {
+    padding: 0;
+    margin: 0;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.menu li a {
+    color: #ffff;
+    text-decoration: none;
+    align-self: center;
+    font-size: 15px;
+    padding-left: 80px;
+    position: relative;
+}
+
+header {
+    background-color: #2b5a41;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+.header1 {
+    background-color: #2b5a41;
+    height: 850px;
+    width: 100%;
+    margin-top: 0%;
+}
+
+.header_block1 {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.logo {
+    color: #ffff;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+    height: 50px;
+    padding-left: 100px;
+}
+
+.logo1::after {
+    content: "";
+    position: absolute;
+    background-color: #c4c4c4;
+    height: 4px;
+    width: 0;
+    left: 80px;
+    bottom: -10px;
+    border-radius: 3px;
+}
+
+.menu li a:hover::after {
+    width: 43%;
+    transition: 0.5s;
+}
+
+.sign_div {
+    margin-right: 50px;
+}
+
+.logo3 {
+    color: #ffff;
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-style: normal;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.logo4 {
+    color: #ffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    padding: 13px 45px;
+    text-decoration: none;
+    background: #FF7B4E;
+    border-radius: 25px;
+}
+
+@media (max-width: 1040px) {
+    .header_block1 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    .toggle {
+        clear: both;
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        line-height: 40px;
+        width: 100%;
+        color: #ffff;
+        transition: all .1s linear;
+        cursor: pointer;
+    }
+    .toggle:hover {
+        background: #578b70;
+    }
+    #checkbox-menu :checked+label .touch li {
+        opacity: 1;
+        visibility: visible;
+        transition: all .1s linear;
+    }
+    #checkbox-menu:checked+label .touch {
+        height: 180px;
+    }
+    .menu {
+        height: 0;
+        transition: height .1s linear;
+        display: block;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+        width: 50%;
+    }
+    .menu li {
+        display: flex;
+        align-self: left;
+        width: 95%;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .sign_div,
+    .logo3 {
+        text-align: center;
+        margin-right: 0;
+        padding: 15px;
+    }
+    .logo,
+    .menu li a {
+        padding-left: 0;
+    }
+}
